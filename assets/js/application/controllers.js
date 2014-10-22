@@ -1,11 +1,8 @@
-application.controller('HomeController', function ($scope, $http, ItemFactory) {
+application.controller('HomeController', function ($scope) {
 
 	init();
 
 	function init() {
-		ItemFactory.all().success(function (items) {
-			console.log(items);
-		})
 	}
 
 })

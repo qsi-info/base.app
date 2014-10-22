@@ -5,14 +5,3 @@
  * 
  */ 
 
-
- application.factory('ItemFactory', function ($http) {
- 		var factory = {};
-
- 		factory.all = function () {
- 			return $http.get('/item');
- 			
- 		};
-
- 		return factory;
- })

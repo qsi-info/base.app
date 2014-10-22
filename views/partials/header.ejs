@@ -11,7 +11,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/"><%= sails.config.appName %></a>
+      <a class="navbar-brand" href="/#"><%= sails.config.appName %></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -25,6 +25,11 @@
              <span class="caret"></span>
            </a>
           <ul class="dropdown-menu" role="menu">
+            <% if(req.user.permission_level == 'admin') { %> 
+            <li>
+              <a href="/admin"><%= __('Admin.Panel') %></a>
+            </li>
+            <% } %>
             <li>
               <a href="/auth/logout" id="logout"><%= __('Auth.Logout') %></a>
             </li>
