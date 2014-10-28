@@ -36,6 +36,8 @@ module.exports.routes = {
 
   'post /admin/settings/update' : 'AdminController.updateSettings',
 
+  'post /admin/settings/theme' : 'AdminController.updateTheme',
+
   'post /admin/credentials/update' : 'AdminController.updateCredentials',
 
 };

@@ -14,7 +14,12 @@
 
 module.exports.adapters = {
 
-  'default': 'mssql',
+  'default': 'disk',
+
+
+  disk: {
+    module: 'sails-disk',
+  },
 
 
   // Eventually from configuration file.

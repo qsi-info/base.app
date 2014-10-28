@@ -37,6 +37,18 @@ module.exports = {
 		})
 	},
 
+	updateTheme: function (req, res) {
+		req.body.ie_integration = sails.settings.ie_integration == true ? 'on' : 'off';
+		Settings.update(sails.settings.id, req.body)
+		.then(function (settings) {
+			setup(settings[0]);
+			return res.redirect('/admin');
+		})
+		.fail(function (err) {
+			return console.log(err);
+		})
+	},
+
 
 	users: function (req, res) {
 		User.find()

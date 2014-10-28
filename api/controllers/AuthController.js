@@ -43,7 +43,6 @@ module.exports = {
       req.body.password = password;
 
       authenticate(req, res, function (err, user) {
-        console.log(user);
         if (err || !user) handleCallback(err, false);
         else req.logIn(user, function (err) {
           handleCallback(err, user);

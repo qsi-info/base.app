@@ -20,4 +20,5 @@ module.exports.themes = [
 	'bootstrap/united',
 	'bootstrap/yeti',
 	'bootstrap/superhero',
+	'bootstrap/google',
 ]

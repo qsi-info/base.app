@@ -37,7 +37,7 @@ module.exports.policies = {
   },
 
   // Add those policies for all models you want to perform CRUD 
-  'item': ['isAuthenticated', 'applyPermissions', 'createdBy', 'updatedBy'],
+  // 'model': ['isAuthenticated', 'applyPermissions', 'createdBy', 'updatedBy'],
 
 
 };
